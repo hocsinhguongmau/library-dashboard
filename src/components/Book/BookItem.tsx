@@ -39,9 +39,14 @@ export default function BookItem({
       <p className="text-center">
         Published date: {formatPublishedDate(publishedDate)}
       </p>
-      <button onClick={handleDeleteBook} disabled={isLoading}>
-        delete
-      </button>
+      <p className="mt-4">
+        <button
+          className="button"
+          onClick={handleDeleteBook}
+          disabled={isLoading}>
+          delete
+        </button>
+      </p>
       {isError && <p>Cannot delete book</p>}
     </div>
   )
